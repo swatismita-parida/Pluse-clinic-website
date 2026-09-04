@@ -60,3 +60,27 @@ form.addEventListener('submit', (e) => {
 document.getElementById('backTop').addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+// ==========================================
+// ---------- SAFE GSAP Animations (Kuch bhi hide nahi hoga) ----------
+// ==========================================
+gsap.registerPlugin(ScrollTrigger);
+
+// Hero Par Sirf Text Entrance Animation (Safe)
+gsap.from('.hero h1', { duration: 1, y: 30, opacity: 0, ease: 'power3.out' });
+gsap.from('.hero-sub', { duration: 1, y: 20, opacity: 0, delay: 0.2, ease: 'power3.out' });
+gsap.from('.hero-actions .btn', { duration: 1, y: 20, opacity: 0, delay: 0.4, stagger: 0.1, ease: 'power3.out' });
+
+// Scroll Par Sections Ko Upar Aana (Safe - Isme kuch hide nahi hota)
+gsap.utils.toArray('section').forEach((section) => {
+  gsap.from(section, {
+    scrollTrigger: {
+      trigger: section,
+      start: "top 85%",
+    },
+    y: 50,
+    opacity: 0,
+    duration: 0.8,
+    ease: "power2.out"
+  });
+});
