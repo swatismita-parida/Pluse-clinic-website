@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pulse Clinic — Bhubaneswar</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts: Poppins for headings, Inter for body, plus a playful script for logo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <style>
+    /* quick override for logo font & added logo mark */
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 28px;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .logo-mark {
+      display: inline-block;
+      background: #2E8B8B;
+      color: white;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 34px;
+      font-size: 18px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      margin-right: 4px;
+    }
+    /* hero image background */
+    .hero {
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-bg-img {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 55%;
+      height: 100%;
+      /* Yahan 2nd photo (Building) ka URL daala hai */
+      background-image: url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=1200&q=80');
+      background-size: cover;
+      background-position: center;
+      border-radius: 30px 0 0 30px;
+      opacity: 0.15;
+      z-index: 0;
+    }
+    @media (max-width: 900px) {
+      .hero-bg-img {
+        width: 100%;
+        border-radius: 0;
+        opacity: 0.08;
+      }
+    }
+    /* doctor photo placeholders – using unsplash random medical portraits */
+    .trainer-photo {
+      background-size: cover !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+    }
+
+    /* Yahan About section ke liye naya style add kiya hai */
+    .about-img {
+      background-image: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80'); /* 3rd photo (Room) yahan lagayi hai */
+      background-size: cover;
+      background-position: center;
+      border-radius: 20px;
+      height: 400px; /* Height set kar di hai taaki photo dikhe */
+    }
+    .about-img-block {
+      display: none; /* Purana emoji block hide kar diya */
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="logo">
+      <span class="logo-mark">⚕</span> Pulse
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#doctors">Doctors</a></li>
+      <li><a href="#packages">Packages</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact" class="nav-cta">Book Appointment</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="hero-bg-img"></div> <!-- hospital/medical background image -->
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <p class="location-tag">Bhubaneswar, Odisha</p>
+      <h1>Care that<br>listens first.</h1>
+      <p class="hero-sub">Pulse Clinic brings together specialists across cardiology, pediatrics, orthopedics, and general medicine — under one roof, with same-day appointments most days.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Book an Appointment</a>
+        <a href="#services" class="btn btn-ghost">Our Departments</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num" data-target="15000">0</span>
+        <span class="stat-label">patients treated</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-target="22">0</span>
+        <span class="stat-label">specialist doctors</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-target="9">0</span>
+        <span class="stat-label">years in Bhubaneswar</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-target="24">0</span>
+        <span class="stat-label">hour emergency care</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="about" id="about">
+  <div class="about-inner">
+    <!-- Yahan 3rd photo (Room) aa jayegi CSS ki wajah se -->
+    <div class="about-img"><div class="about-img-block">🏥</div></div>
+    <div class="about-copy">
+      <h2>We built Pulse around one idea: your first visit shouldn't feel rushed.</h2>
+      <p>Founded in 2017 by a group of Bhubaneswar-based doctors tired of 5-minute consultations, Pulse Clinic runs on longer appointment slots, real follow-ups, and specialists who actually talk to each other about your case.</p>
+      <p>Whether it's a routine check-up or ongoing care, we track your history so you never have to repeat your story from scratch.</p>
+      <ul class="about-points">
+        <li>Digital health records for every patient</li>
+        <li>Same-day appointments for urgent concerns</li>
+        <li>Transparent, upfront pricing on all packages</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="programs" id="services">
+  <div class="section-head">
+    <h2>Departments</h2>
+    <p>Specialist care across the conditions that matter most.</p>
+  </div>
+  <div class="program-grid">
+    <article class="program-card">
+      <h3>Cardiology</h3>
+      <p>ECG, echo, and ongoing care for heart health at every age.</p>
+      <span class="program-tag">Mon–Sat</span>
+    </article>
+    <article class="program-card">
+      <h3>Pediatrics</h3>
+      <p>Vaccinations, growth tracking, and child health from birth onward.</p>
+      <span class="program-tag">Daily</span>
+    </article>
+    <article class="program-card">
+      <h3>Orthopedics</h3>
+      <p>Joint, bone, and sports injury care, including physiotherapy referrals.</p>
+      <span class="program-tag">Mon, Wed, Fri</span>
+    </article>
+    <article class="program-card">
+      <h3>Dermatology</h3>
+      <p>Skin, hair, and nail conditions — medical and cosmetic consultations.</p>
+      <span class="program-tag">Tue, Thu, Sat</span>
+    </article>
+    <article class="program-card">
+      <h3>Dental Care</h3>
+      <p>Cleanings, fillings, and general dental health under one roof.</p>
+      <span class="program-tag">Mon–Sat</span>
+    </article>
+    <article class="program-card">
+      <h3>General Physician</h3>
+      <p>Everyday illness, checkups, and referrals to the right specialist.</p>
+      <span class="program-tag">Daily</span>
+    </article>
+  </div>
+</section>
+
+<section class="trainers" id="doctors">
+  <div class="section-head">
+    <h2>Our Doctors</h2>
+    <p>Meet a few of the specialists you might see.</p>
+  </div>
+  <div class="trainer-grid">
+    <article class="trainer-card">
+      <div class="trainer-photo" style="background-image: url('https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop&crop=face');"></div>
+      <h3>Dr. Suresh Panda</h3>
+      <span class="trainer-role">Cardiologist, MD</span>
+      <p>15 years in interventional cardiology, trained at AIIMS.</p>
+    </article>
+    <article class="trainer-card">
+      <div class="trainer-photo" style="background-image: url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop&crop=face');"></div>
+      <h3>Dr. Anjali Mohanty</h3>
+      <span class="trainer-role">Pediatrician, MD</span>
+      <p>Runs our child wellness program alongside general pediatrics.</p>
+    </article>
+    <article class="trainer-card">
+      <div class="trainer-photo" style="background-image: url('https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop&crop=face');"></div>
+      <h3>Dr. Atul Gawande</h3>
+      <span class="trainer-role">Orthopedic Surgeon</span>
+      <p>Focuses on sports injuries and joint replacement surgery.</p>
+    </article>
+    <article class="trainer-card">
+      <div class="trainer-photo" style="background-image: url('https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=400&fit=crop&crop=face');"></div>
+      <h3>Dr. Mandy Cohen</h3>
+      <span class="trainer-role">Dermatologist</span>
+      <p>Specialist in both medical and cosmetic skin treatments.</p>
+    </article>
+  </div>
+</section>
+
+<section class="membership" id="packages">
+  <div class="section-head">
+    <h2>Health Checkup Packages</h2>
+    <p>Preventive care shouldn't wait for a symptom.</p>
+  </div>
+  <div class="plan-grid">
+    <article class="plan-card">
+      <h3>Basic</h3>
+      <p class="plan-price">₹1,499</p>
+      <ul>
+        <li>Blood pressure &amp; sugar screening</li>
+        <li>BMI &amp; general physical exam</li>
+        <li>Basic blood work</li>
+      </ul>
+      <a href="#contact" class="btn btn-ghost">Book Basic</a>
+    </article>
+    <article class="plan-card featured">
+      <span class="plan-badge">Most booked</span>
+      <h3>Comprehensive</h3>
+      <p class="plan-price">₹3,999</p>
+      <ul>
+        <li>Everything in Basic</li>
+        <li>ECG &amp; chest X-ray</li>
+        <li>Full blood panel + consultation</li>
+      </ul>
+      <a href="#contact" class="btn btn-primary">Book Comprehensive</a>
+    </article>
+    <article class="plan-card">
+      <h3>Executive</h3>
+      <p class="plan-price">₹7,499</p>
+      <ul>
+        <li>Everything in Comprehensive</li>
+        <li>Ultrasound abdomen + specialist review</li>
+        <li>Personalised health report</li>
+      </ul>
+      <a href="#contact" class="btn btn-ghost">Book Executive</a>
+    </article>
+  </div>
+</section>
+
+<section class="facilities" id="facilities">
+  <div class="section-head">
+    <h2>Why Choose Us</h2>
+  </div>
+  <div class="facility-grid">
+    <div class="facility">In-house diagnostic lab</div>
+    <div class="facility">24-hour pharmacy</div>
+    <div class="facility">Wheelchair accessible</div>
+    <div class="facility">Cashless insurance support</div>
+    <div class="facility">On-site parking</div>
+    <div class="facility">Digital reports via app</div>
+  </div>
+</section>
+
+<section class="testimonials" id="testimonials">
+  <div class="section-head">
+    <h2>Patient stories</h2>
+  </div>
+  <div class="testimonial-grid">
+    <blockquote class="testimonial">
+      <p>"First clinic where the doctor actually reviewed my full history before deciding on treatment."</p>
+      <cite>— Rashmi B., patient since 2021</cite>
+    </blockquote>
+    <blockquote class="testimonial">
+      <p>"Got a same-day appointment for my son's fever. In and out within 40 minutes, properly checked."</p>
+      <cite>— Manoj T., patient since 2022</cite>
+    </blockquote>
+    <blockquote class="testimonial">
+      <p>"The comprehensive checkup caught a thyroid issue early. Genuinely grateful for that."</p>
+      <cite>— Deepika S., patient since 2020</cite>
+    </blockquote>
+  </div>
+</section>
+
+<section class="schedule" id="schedule">
+  <div class="section-head">
+    <h2>OPD Timings</h2>
+    <p>Clinic hours: 8:00 AM – 8:00 PM, Monday–Saturday · Emergency: 24/7</p>
+  </div>
+  <div class="schedule-table-wrap">
+    <table class="schedule-table">
+      <thead>
+        <tr><th>Time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>9:00 AM</td><td>Cardiology</td><td>Derma</td><td>Ortho</td><td>Derma</td><td>Cardiology</td><td>General</td></tr>
+        <tr><td>11:00 AM</td><td>Pediatrics</td><td>General</td><td>Pediatrics</td><td>General</td><td>Pediatrics</td><td>Dental</td></tr>
+        <tr><td>3:00 PM</td><td>General</td><td>Ortho</td><td>General</td><td>Ortho</td><td>Dental</td><td>—</td></tr>
+        <tr><td>5:00 PM</td><td>Dental</td><td>Pediatrics</td><td>Dental</td><td>Cardiology</td><td>General</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="section-head">
+    <h2>Questions</h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q">Do I need to book in advance?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>Not for general physician visits — walk-ins are welcome. Specialist departments recommend booking a day ahead.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Do you accept health insurance?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>Yes, we support cashless treatment with most major insurance providers — bring your policy card at check-in.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">How soon are lab reports ready?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>Routine blood work is typically ready within 24 hours, viewable directly on our patient app.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Is there an emergency department?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>Yes — our emergency department is staffed 24/7, separate from regular OPD hours.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Can I get a second opinion here?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><p>Absolutely — bring your existing reports and we'll book you with the relevant specialist.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-copy">
+      <h2>Book an appointment</h2>
+      <p>Fill this in and our front desk will call within a few hours to confirm your slot.</p>
+      <ul class="contact-details">
+        <li><strong>Address</strong><br>18 Health Avenue, Bhubaneswar, Odisha</li>
+        <li><strong>Phone</strong><br>+91 80182 26416</li>
+        <li><strong>Hours</strong><br>Mon–Sat, 8:00 AM – 8:00 PM · Emergency 24/7</li>
+      </ul>
+    </div>
+    <form class="contact-form" id="contactForm">
+      <label>Name<input type="text" name="name" required></label>
+      <label>Phone<input type="tel" name="phone" required pattern="[0-9]{10}" placeholder="10-digit number"></label>
+      <label>Department
+        <select name="department" required>
+          <option value="">Select</option>
+          <option>Cardiology</option><option>Pediatrics</option><option>Orthopedics</option>
+          <option>Dermatology</option><option>Dental</option><option>General Physician</option>
+        </select>
+      </label>
+      <label>Message<textarea name="message" rows="4" placeholder="Briefly describe your concern"></textarea></label>
+      <button type="submit" class="btn btn-primary full">Book an Appointment</button>
+      <p class="form-success hidden" id="formSuccess">Thanks — our front desk will call to confirm your appointment shortly.</p>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="logo">
+      <span class="logo-mark">⚕</span> Pulse
+    </span>
+    <p>© 2026 Pulse Clinic, Bhubaneswar. All rights reserved.</p>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
