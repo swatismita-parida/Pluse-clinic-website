@@ -34,3 +34,7 @@ Open `index.html` in VS Code -> right-click -> "Open with Live Server".
 
 ## Developer
 Swatismita Parida -- Full-Stack Developer Intern, SuuSri AI
+
+## Live Website URL
+https://swatismita-parida.github.io/Pluse-clinic-website/
+
